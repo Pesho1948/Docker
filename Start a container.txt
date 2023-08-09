@@ -1,7 +1,0 @@
-To interact with a docker container we need to bind to a UNIX socket. By default the owner of the socket is root, which means that we need to use sudo commands.
-
-However, as a workaround we can add the Linux user to the docker group, and the user will have root-access to the docker daemon.
-
-To test docker installation run:
-
-docker container run hello-world
