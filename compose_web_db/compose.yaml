@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres:10.14
+    env_file:
+      - db-var.env
+  webapp:
+    depends_on: 
+      - db
+    image: jfahrer/demo_web_app
+    env_file:
+      - webapp.env
+    ports: 
+      - 9292:9292
